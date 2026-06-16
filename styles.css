@@ -221,6 +221,7 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 56px 24px 72px;
+  text-align: center;
 }
 
 main p {
