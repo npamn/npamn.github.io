@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | npamn</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <span class="brand-mark">NP</span>
+      <span>National Prison Addiction Medicine Network</span>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+    <nav class="primary-nav" id="primary-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <h1>About</h1>
+</div>
+
+<main id="main">
+  <p>
+    High numbers of people with drug dependence in Australian prisons, inconsistent
+    management of drug dependence and withdrawal between jurisdictions, and poor
+    post-release outcomes among people with drug dependence warrant coordinated
+    intervention. The National Prison Addiction Medicine Network (NPAMN) was created in
+    August 2023, to bring together stakeholders across the sector to develop consensus
+    guidelines for the management of addiction in custodial settings and promote
+    evidence-based best-practice healthcare for people in prison through a coordinated
+    national approach.
+  </p>
+
+  <h2>The NPAMN aims to create consensus guidelines around the following domains:</h2>
+  <ul class="domain-list">
+    <li>Withdrawal management, particularly in locations without a subacute ward;</li>
+    <li>Opioid agonist treatment provision, including continuation and initiation;</li>
+    <li>Provision of psychosocial interventions within custodial settings dealing with substance use and relapse prevention;</li>
+    <li>Management of co-occurring trauma/mental illness and dual diagnosis concerns;</li>
+    <li>Management and screening of blood-borne viruses;</li>
+    <li>Harm reduction interventions including NSPs, take-home naloxone and peer-based mentoring; and</li>
+    <li>Discharge planning and transitioning people from prison-based to community-based care.</li>
+  </ul>
+
+  <div class="org-note">
+    The NPAMN is currently administratively supported by Western Health and the Burnet Institute.
+  </div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 National Prison Addiction Medicine Network
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>

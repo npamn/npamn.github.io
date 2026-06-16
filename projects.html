@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | npamn</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <span class="brand-mark">NP</span>
+      <span>National Prison Addiction Medicine Network</span>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+    <nav class="primary-nav" id="primary-menu">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="assets/hero_image.jpg" alt="" class="hero-bg">
+  <div class="hero-content">
+    <div class="eyebrow">npamn</div>
+    <h1>National Prison Addiction Medicine Network</h1>
+  </div>
+</section>
+
+<main id="main">
+  <p class="lede">
+    The National Prison Addiction Medicine Network brings together stakeholders across the
+    sector to develop consensus guidelines for the management of addiction in custodial
+    settings, and to promote evidence-based, best-practice healthcare for people in prison
+    through a coordinated national approach.
+  </p>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 National Prison Addiction Medicine Network
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>

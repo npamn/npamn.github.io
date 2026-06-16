@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications | npamn</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <span class="brand-mark">NP</span>
+      <span>National Prison Addiction Medicine Network</span>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+    <nav class="primary-nav" id="primary-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="publications.html" aria-current="page">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <h1>Publications</h1>
+</div>
+
+<main id="main">
+
+  <article class="publication">
+    <h2>National consensus statement on opioid agonist treatment in custodial settings</h2>
+    <p class="authors">
+      Jocelyn Chan, Jon Cook, Michael Curtis, Adrian J Dunlop, Ele Morrison, Suzanne Nielsen,
+      Rebecca J Winter and Thileepan Naren
+    </p>
+    <a href="#" class="article-link">Link to Article &rarr;</a>
+
+    <div class="endorsement-group">
+      <h3>The statement has been endorsed by:</h3>
+      <div class="logo-row">
+        <img src="assets/PSA.png" alt="PSA">
+        <img src="assets/AIVL.png" alt="AIVL">
+        <img src="assets/NPHN.png" alt="NPHN">
+        <img src="assets/APSAD.png" alt="APSAD">
+        <img src="assets/RACP.png" alt="RACP">
+      </div>
+    </div>
+
+    <div class="endorsement-group">
+      <h3>The statement is also recognised as a "supported resource" by:</h3>
+      <div class="logo-row">
+        <img src="assets/RANZCP.png" alt="RANZCP">
+      </div>
+    </div>
+
+    <div class="endorsement-group">
+      <h3>The statement is also approved as an Accepted Clinical Resource by:</h3>
+      <div class="logo-row">
+        <img src="assets/RACGP.png" alt="RACGP">
+      </div>
+    </div>
+  </article>
+
+  <article class="publication">
+    <h2>The Management of Withdrawal From Alcohol and Other Drugs in Australian Custodial Settings: A Consensus Statement</h2>
+    <p class="authors">
+      Grace FitzGerald, Jocelyn Chan, Jon Cook, Mark Stoove, Michael Curtis, Suzanne Nielsen,
+      Rebecca J Winter and Thileepan Naren
+    </p>
+    <a href="#" class="article-link">Link to Article &rarr;</a>
+
+    <div class="endorsement-group">
+      <h3>The statement has been endorsed by:</h3>
+      <div class="logo-row">
+        <img src="assets/RANZCP.png" alt="RANZCP">
+        <img src="assets/PSA.png" alt="PSA">
+        <img src="assets/AIVL.png" alt="AIVL">
+        <img src="assets/NPHN.png" alt="NPHN">
+        <img src="assets/APSAD.png" alt="APSAD">
+        <img src="assets/RACP.png" alt="RACP">
+      </div>
+    </div>
+
+    <div class="endorsement-group">
+      <h3>The statement is also approved as an Accepted Clinical Resource by:</h3>
+      <div class="logo-row">
+        <img src="assets/RACGP.png" alt="RACGP">
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 National Prison Addiction Medicine Network
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>

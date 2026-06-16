@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | npamn</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <span class="brand-mark">NP</span>
+      <span>National Prison Addiction Medicine Network</span>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+    <nav class="primary-nav" id="primary-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <h1>Contact</h1>
+</div>
+
+<main id="main">
+  <p class="lede">Send us a message and we'll get back to you.</p>
+
+  <form class="contact-grid" id="contact-form" action="#" method="post">
+    <div>
+      <label for="first-name">First name <span class="required">*</span></label>
+      <input type="text" id="first-name" name="first-name" required>
+    </div>
+    <div>
+      <label for="last-name">Last name</label>
+      <input type="text" id="last-name" name="last-name">
+    </div>
+    <div class="full">
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="full">
+      <label for="message">Write a message</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+    <div class="full">
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 National Prison Addiction Medicine Network
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  // Placeholder submit handler — wire this to your new host's
+  // form backend (e.g. Formspree, Netlify Forms, or a server endpoint).
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Form submission is not yet connected. See code comments for setup.');
+  });
+</script>
+
+</body>
+</html>
