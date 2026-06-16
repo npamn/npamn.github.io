@@ -309,6 +309,10 @@ ul.domain-list li {
   margin-bottom: 22px;
 }
 
+.logo-row.centered {
+  justify-content: center;
+}
+
 .logo-row img {
   max-height: 56px;
   width: auto;
