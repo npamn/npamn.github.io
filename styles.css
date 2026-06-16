@@ -1,116 +1,389 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Publications | npamn</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* NPAMN — shared site styles */
 
-<a href="#main" class="skip-link">Skip to content</a>
+:root {
+  --navy: #1a2b4c;
+  --navy-dark: #11203a;
+  --ink: #2b2b2b;
+  --muted: #5c5c5c;
+  --rule: #e1e1e1;
+  --bg: #ffffff;
+  --max-width: 1100px;
+}
 
-<header class="site-header">
-  <div class="nav-wrap">
-    <div class="brand">
-      <span class="brand-mark">NP</span>
-      <span>National Prison Addiction Medicine Network</span>
-    </div>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
-    <nav class="primary-nav" id="primary-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="publications.html" aria-current="page">Publications</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+* {
+  box-sizing: border-box;
+}
 
-<div class="page-header">
-  <h1>Publications</h1>
-</div>
+html {
+  scroll-behavior: smooth;
+}
 
-<main id="main">
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
 
-  <article class="publication">
-    <h2>National consensus statement on opioid agonist treatment in custodial settings</h2>
-    <p class="authors">
-      Jocelyn Chan, Jon Cook, Michael Curtis, Adrian J Dunlop, Ele Morrison, Suzanne Nielsen,
-      Rebecca J Winter and Thileepan Naren
-    </p>
-    <a href="#" class="article-link">Link to Article &rarr;</a>
+a {
+  color: var(--navy);
+  text-decoration: none;
+}
 
-    <div class="endorsement-group">
-      <h3>The statement has been endorsed by:</h3>
-      <div class="logo-row">
-        <img src="assets/PSA.png" alt="PSA">
-        <img src="assets/AIVL.png" alt="AIVL">
-        <img src="assets/NPHN.png" alt="NPHN">
-        <img src="assets/APSAD.png" alt="APSAD">
-        <img src="assets/RACP.png" alt="RACP">
-      </div>
-    </div>
+a:hover {
+  text-decoration: underline;
+}
 
-    <div class="endorsement-group">
-      <h3>The statement is also recognised as a "supported resource" by:</h3>
-      <div class="logo-row">
-        <img src="assets/RANZCP.png" alt="RANZCP">
-      </div>
-    </div>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    <div class="endorsement-group">
-      <h3>The statement is also approved as an Accepted Clinical Resource by:</h3>
-      <div class="logo-row">
-        <img src="assets/RACGP.png" alt="RACGP">
-      </div>
-    </div>
-  </article>
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--navy);
+  color: #fff;
+  padding: 8px 14px;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
 
-  <article class="publication">
-    <h2>The Management of Withdrawal From Alcohol and Other Drugs in Australian Custodial Settings: A Consensus Statement</h2>
-    <p class="authors">
-      Grace FitzGerald, Jocelyn Chan, Jon Cook, Mark Stoove, Michael Curtis, Suzanne Nielsen,
-      Rebecca J Winter and Thileepan Naren
-    </p>
-    <a href="#" class="article-link">Link to Article &rarr;</a>
+/* ---------- Header / Nav ---------- */
 
-    <div class="endorsement-group">
-      <h3>The statement has been endorsed by:</h3>
-      <div class="logo-row">
-        <img src="assets/RANZCP.png" alt="RANZCP">
-        <img src="assets/PSA.png" alt="PSA">
-        <img src="assets/AIVL.png" alt="AIVL">
-        <img src="assets/NPHN.png" alt="NPHN">
-        <img src="assets/APSAD.png" alt="APSAD">
-        <img src="assets/RACP.png" alt="RACP">
-      </div>
-    </div>
+header.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: #fff;
+}
 
-    <div class="endorsement-group">
-      <h3>The statement is also approved as an Accepted Clinical Resource by:</h3>
-      <div class="logo-row">
-        <img src="assets/RACGP.png" alt="RACGP">
-      </div>
-    </div>
-  </article>
+.nav-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
 
-</main>
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--navy-dark);
+}
 
-<footer class="site-footer">
-  &copy; 2026 National Prison Addiction Medicine Network
-</footer>
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--navy-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
 
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.primary-nav');
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-</script>
+nav.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
 
-</body>
-</html>
+nav.primary-nav a {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav.primary-nav a[aria-current="page"] {
+  color: var(--navy-dark);
+  font-weight: 700;
+  border-bottom: 2px solid var(--navy-dark);
+  padding-bottom: 2px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  nav.primary-nav ul {
+    display: none;
+  }
+  .nav-toggle {
+    display: inline-block;
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  nav.primary-nav.open ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    right: 24px;
+    top: 64px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    padding: 16px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+}
+
+/* ---------- Hero (Home page) ---------- */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.hero img.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 16, 30, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 40px 24px;
+  max-width: 800px;
+}
+
+.hero-content .eyebrow {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* ---------- Page header (non-home pages) ---------- */
+
+.page-header {
+  background: var(--navy-dark);
+  color: #fff;
+  padding: 56px 24px 40px;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+}
+
+/* ---------- Main content ---------- */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+
+main p {
+  color: var(--ink);
+  max-width: 760px;
+}
+
+main h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-top: 0;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--ink);
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+ul.domain-list {
+  max-width: 760px;
+  padding-left: 22px;
+  margin: 18px 0 32px;
+}
+
+ul.domain-list li {
+  margin-bottom: 12px;
+}
+
+.org-note {
+  background: #f4f6f9;
+  border-left: 3px solid var(--navy-dark);
+  padding: 18px 22px;
+  max-width: 760px;
+  margin-top: 32px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ---------- Publications ---------- */
+
+.publication {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px;
+  margin-bottom: 32px;
+}
+
+.publication h2 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+
+.publication .authors {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.publication .article-link {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.endorsement-group {
+  margin-top: 18px;
+}
+
+.endorsement-group h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.logo-row img {
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---------- Contact form ---------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 600px;
+}
+
+.contact-grid .full {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+label .required {
+  color: #b3261e;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button.submit-btn {
+  background: var(--navy-dark);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button.submit-btn:hover {
+  background: var(--navy);
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
