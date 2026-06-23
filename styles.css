@@ -203,10 +203,23 @@ nav.primary-nav a[aria-current="page"] {
 /* ---------- Page header (non-home pages) ---------- */
 
 .page-header {
-  background: var(--navy-dark);
+  background: url('assets/hero_image.jpg') center center / cover no-repeat;
   color: #fff;
   padding: 56px 24px 40px;
   text-align: center;
+  position: relative;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 16, 30, 0.55);
+}
+
+.page-header h1 {
+  position: relative;
+  z-index: 1;
 }
 
 .page-header h1 {
